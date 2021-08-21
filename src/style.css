@@ -262,8 +262,12 @@ a:focus {
   margin-bottom: var(--spacing-12);
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(190, 49, 85, 0.452)), url("./images/bg.png");
   padding: 1em 2em;
-  width: 100vh;
-  margin-left: -2em;
+  margin:  0 -2em 0 -2em;
+  display: flex;
+  flex-flow: column nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content-extend {
