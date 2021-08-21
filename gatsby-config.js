@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Toki Projects`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Karen Carnaval`,
+      summary: `, a 2D/3D Artist with a passion for animation.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Updates for my Art Project`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `motok-wolf`,
     },
   },
   plugins: [
@@ -82,6 +82,7 @@ module.exports = {
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
                   custom_elements: [{ "content:encoded": node.html }],
+                  image: post.frontmatter.image,
                 })
               })
             },
@@ -99,6 +100,7 @@ module.exports = {
                     frontmatter {
                       title
                       date
+                      image
                     }
                   }
                 }
@@ -112,13 +114,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Toki Projects`,
+        short_name: `TokiArt`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#841545`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/toki-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,

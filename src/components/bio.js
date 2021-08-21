@@ -32,25 +32,27 @@ const Bio = () => {
 
   return (
     <div className="bio">
+      <a href="./about" style={{textDecoration: `none`}}>
       <StaticImage
         className="bio-avatar"
         layout="fixed"
-        formats={["AUTO", "WEBP", "AVIF"]}
-        src="../images/profile-pic.png"
+        formats={["AUTO", "WEBP", "AVIF"]}W
+        src="../images/profile-kat.png"
         width={50}
         height={50}
         quality={95}
         alt="Profile picture"
       />
-      {author?.name && (
-        <p>
+      {author?.name && ( <p>
           Written by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
           <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
+            You can also see my Twitter
           </a>
         </p>
+        
       )}
+      </a>
     </div>
   )
 }

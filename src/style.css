@@ -54,13 +54,16 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
+  --color-primary: #c32e49;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
+  --color-heading: #172a3a;
   --color-heading-black: black;
-  --color-accent: #d1dce5;
+  --color-accent: #c4cad0;
+  --color-bg: #fcf7ff;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* HTML elements */
 
@@ -81,10 +84,12 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
 footer {
-  padding: var(--spacing-6) var(--spacing-0);
+  padding: var(--spacing-1) var(--spacing-0);
+  font-size: var(--fontSize-0);
 }
 
 hr {
@@ -120,7 +125,7 @@ h6 {
 h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  color: var(--color-heading);
 }
 
 h2 {
@@ -241,6 +246,9 @@ a:focus {
 /* Custom classes */
 
 .global-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-10) var(--spacing-5);
@@ -252,11 +260,30 @@ a:focus {
 
 .global-header {
   margin-bottom: var(--spacing-12);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(190, 49, 85, 0.452)), url("./images/bg.png");
+  padding: 1em 2em;
+  width: 100vh;
+  margin-left: -2em;
+}
+
+.content-extend {
+  flex-grow: 1;
+}
+
+.post-header {
+  height: 14px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(139, 201, 99)), url("./images/bg.png")
+  ;
+  margin-bottom: var(--spacing-2);
 }
 
 .main-heading {
   font-size: var(--fontSize-7);
   margin: 0;
+}
+
+.main-heading a{
+  color: var(--color-bg);
 }
 
 .post-list-item {
@@ -286,13 +313,18 @@ a:focus {
   font-size: var(--fontSize-2);
 }
 
-.bio {
+.global-header a {
+  color: var(--color-bg);
+}
+
+.bio a {
   display: flex;
   margin-bottom: var(--spacing-16);
 }
 
-.bio p {
+.bio a p {
   margin-bottom: var(--spacing-0);
+  color:var(--color-text);
 }
 
 .bio-avatar {
@@ -319,6 +351,19 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+.fill {
+  display: flex;
+  height: 8em;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+.fill img {
+  
+  min-width: 100%;
+  min-height: 100%
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
@@ -331,3 +376,5 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+
